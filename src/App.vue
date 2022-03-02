@@ -3,8 +3,8 @@
         <v-app-bar app elevation="0">
             <v-subheader><h1 class="green--text">Portfolio<span class="pink--text">.in</span></h1></v-subheader>
             <v-tabs center-active right background-color="transparent" active-class="active-tab">
-                <v-tab href="#home">Home</v-tab>
-                <v-tab>About</v-tab>
+                <v-tab href="/home">Home</v-tab>
+                <v-tab href="/about">About</v-tab>
                 <v-tab>Portfolio</v-tab>
                 <v-tab>Blog</v-tab>
                 <v-tab>Contact</v-tab>
@@ -63,7 +63,7 @@
                                     <v-icon>mdi-download</v-icon>
                                 </v-btn>
                             </v-card>
-                        </v-col>
+                        </v-col>    
                         <v-col lg="6" cols="6">
                             <v-card class="pa-6 rounded-lg" color="#e1e0e0c9" elevation="6">
                                 <div class="py-1" v-for="(item,index) in items" :key="index">
@@ -81,7 +81,7 @@
             </section>
             <section class="educaion py-6">
                 <v-container>
-                    <h4 class="display-2 text-center">Education</h4>
+                    <h4 class="display-2 text-center red--text">Education</h4>
                     <v-row class="py-8">
                         <v-col cols="12" lg="6">
                             <v-card class="pa-6 rounded-xl " elevation="5">
@@ -114,7 +114,7 @@
                                     justo sed libero varius vulputate.
                                 </v-card-text>
                             </v-card>
-                        </v-col>
+                        </v-col>    
                     </v-row>
                 </v-container>
             </section>
@@ -122,12 +122,12 @@
                 <v-img class="pa-10" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                        src="https://designshack.net/wp-content/uploads/Home-office.jpg">
                     <v-container>
-                        <h4 class="display-2 text-center">Experience</h4>
+                        <h4 class="display-4 mb-15 text-center indigo--text">Experience</h4>
                         <v-timeline>
                             <v-timeline-item v-for="(exper,index) in experience" :key="index"
                                              :color="index % 2 === 0 ?'pink':'green'">
                                 <v-card class="rounded-xl">
-                                    <v-card-title :color="index % 2 === 0 ?'pink':'green'">
+                                    <v-card-title >
                                         {{exper.title}}
                                     </v-card-title>
                                     <v-card-text>
@@ -212,7 +212,7 @@
         name: 'App',
 
         data: () => ({
-            drawer: null,
+            // drawer: null,
             items: [
                 {title: 'HTML', value: 100, color: 'light-blue'},
                 {title: 'CSS', value: 100, color: 'deep-orange'},
